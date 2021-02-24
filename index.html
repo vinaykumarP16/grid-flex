@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<a href="">home</a>
+			<a href="">contact</a>
+			<a href="">career</a>
+			<a href="">about</a>
+			<a href="">signin</a>
+		</nav>
+		<main>
+			<img src="i/bootstrap.png" alt="">
+			<img src="i/icon1.png" alt="">
+			<img src="i/icon2.png" alt="">
+			<img src="i/icon3.png" alt="">
+			<img src="i/icon4.png" alt="">
+			<img src="i/icon5.png" alt="">
+		</main>
+		<div id="side">
+			<img src="i/htmlcss.png" alt="">
+			<img src="i/js.png" alt="">
+			<img src="i/react.png" alt="">
+		</div>
+		<div id="side2">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Exercitationem, repellat odio soluta tempore laborum debitis dolores earum, deleniti qui nemo architecto modi at cumque possimus quisquam quia rem facere, voluptatibus!</div>
+		<div id="sub1"> <img src="i/img1.jpg" alt=""></div>
+		<div id="sub2"><img src="i/img2.jpg" alt=""></div>
+		<div id="sub3"><img src="i/img3.jpg" alt=""></div>
+		<footer>
+			<a href="">Anchor</a>
+			<a href="">Anchor</a>
+			<a href="">Anchor</a>
+			<a href="">Anchor</a>
+		</footer>
+
+</div>
+</body>
+</html>
+
+<style type="text/css">
+	:root{
+		--main-radius:10px;
+		--main-padding:10px;
+	}
+
+	body{
+		padding: 0px;
+		margin: 5px;
+		background-color: black;
+		
+	}
+	.container{
+		display: grid;
+		height: 100vh;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0.3fr 1.5fr 1.2fr 0.8fr 1fr; 
+		grid-template-areas:"nav nav nav nav"
+							"main main main side"
+							"sub1 sub2 sub3 side"
+							"side5 side5 side5 side"
+							"footer footer footer footer";
+		grid-gap: 0.2em; 
+		text-align: center;
+	}
+	nav{
+		background: #2196f3;
+		grid-area:nav;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+
+	}
+
+	nav a{
+		display: inline-block;
+		padding: 10px;
+		border: none;
+		margin:2px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	main{
+		background: #ffc107;
+		grid-area: main; 
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+	}
+	main img{
+		width: 100px;
+		height: 100px;
+		padding: 5px;
+		border: none;
+		margin: 10px;
+		
+	}
+	#side{
+		background: #f52e4a;
+		grid-area: side;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	#side img{
+		padding: 20px;
+		border: none;
+		margin: 20px;
+		width: 100px;
+		height:100px;
+	}
+
+	#side2{
+		background:#1407d4;
+		grid-area: side5;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+		display: flex;
+		justify-content: center;
+		align-items:center ;
+		color: #fff;
+	}
+	#sub1{
+		background: #c9f9fb;
+		grid-area: sub1;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+	}
+
+	#sub1 img{
+		width: 300px;
+		height: 200px;
+	}
+	#sub2{
+		background: #b983f5;
+		grid-area: sub2;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+	}
+	#sub2 img{
+		width: 200px;
+		height: 200px;
+		align-items:center;
+	}
+	#sub3{
+		background:#31da55;
+		grid-area: sub3;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+
+	}
+	#sub3 img{
+		width: 250px;
+		height: 180px;
+		justify-content: center;
+		align-content: center;
+	}
+	footer{
+		background: #d5fb3f;
+		grid-area: footer;
+		border-radius: var(--main-radius);
+		padding: var(--main-padding);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	footer a{
+		padding: 10px;
+		border: none;
+		margin: 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		font-weight: bolder;
+	}
+	@media only screen and (max-width: 650px){
+		.container{
+			grid-template-columns: 1fr;
+			grid-template-rows: 0.5fr 0.5fr 2.2fr 0.7fr 1.2fr 1.2fr 1fr;
+			grid-template-areas: 
+			"nav"
+			"side"
+			"main"
+			"side5"
+			"sub1"
+			"sub2"
+			"sub3"
+			"footer";
+		}
+
+		#side{
+			display:flex;
+			flex-direction: row;
+		}
+
+		#side img{
+			margin: auto;
+
+		}
+
+		
+	}
+	
+</style>
